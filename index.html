@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>My Time-Tracking Project</title>
+  <meta name="description" content="">
+  <meta name="author" content="Gerardo Durán Martín">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/reveal.min.css">
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/theme/default.css" id="theme">
+  <link rel="stylesheet" href="libraries/highlighters/prettify/css/tomorrow.css" id="theme">
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->  <link rel="stylesheet" href = "assets/css/ribbons.css">
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section class='' data-state='' id='slide-1'>
+  <h2>My Time-Tracking Project</h2>
+  <h3>Final Project for the <em>Developing Data Products class</em></h3>
+
+<h4>Gerardo Durán Martín</h4>
+
+</section>
+<section class='' data-state='' id='slide-2'>
+  <h2>Ever wondered how much time you spend on things?</h2>
+  <p><iframe src=' figure/nvd3plot2-1.html ' scrolling='no' frameBorder='0' seamless class='rChart polycharts ' id=iframe- chartab86d568c30 ></iframe> <style>iframe.rChart{ width: 100%; height: 400px;}</style></p>
+
+</section>
+<section class='' data-state='' id='slide-3'>
+  <h2>Are you making proress?</h2>
+  <p><iframe src=' figure/unnamed-chunk-1-1.html ' scrolling='no' frameBorder='0' seamless class='rChart polycharts ' id=iframe- chartab85d7ae336 ></iframe> <style>iframe.rChart{ width: 100%; height: 400px;}</style></p>
+
+</section>
+<section class='' data-state='' id='slide-4'>
+  <h2>With Toggl and R you can find out!</h2>
+  <p><img src = "p1.png"> <img src = "p2.png", width = 300, height = 300> </p>
+
+</section>
+<section class='' data-state='' id='slide-5'>
+  <h2>Here&#39;s my take!</h2>
+  <p><a href="https://qger.shinyapps.io/time_tracker">My Time-Tracking Journey</a></p>
+
+</section>
+    </div>
+  </div>
+</body>
+  <script src="libraries/frameworks/revealjs/lib/js/head.min.js"></script>
+  <script src="libraries/frameworks/revealjs/js/reveal.min.js"></script>
+  <script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    theme: Reveal.getQueryHash().theme || 'default', 
+    transition: Reveal.getQueryHash().transition || 'default', 
+    dependencies: [
+    // Cross-browser shim that fully implements classList -
+    // https://github.com/eligrey/classList.js/
+      { src: 'libraries/frameworks/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList;}},
+      // Zoom in and out with Alt+click
+      { src: 'libraries/frameworks/revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Speaker notes
+      { src: 'libraries/frameworks/revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Remote control your reveal.js presentation using a touch device
+      //{ src: 'libraries/frameworks/revealjs/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+      ]
+  });
+  </script>  <!-- Google Prettify -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
+<script src='libraries/highlighters/prettify/js/lang-r.js'></script>
+<script>
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i < pres.length; ++i) {
+    pres[i].className = "prettyprint linenums";
+  }
+  prettyPrint();
+</script>
+<!-- End Google Prettify --> 
+
+</html>

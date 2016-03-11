@@ -1,0 +1,62 @@
+---
+title       : My Time-Tracking Project
+subtitle    : Final Project for the Developing Data Products class
+author      : Gerardo Durán Martín
+framework   : revealjs      # {io2012, html5slides, shower, dzslides, ...}
+highlighter : prettify  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+ext_widgets : {rCharts: "libraries/polycharts"}
+
+---
+
+## My Time-Tracking Project
+### Final Project for the *Developing Data Products class*
+#### Gerardo Durán Martín
+
+---
+
+## Ever wondered how much time you spend on things?
+```{r nvd3plot2, echo = F, results='asis', comment=NA, message=FALSE}
+library(knitr)
+library(rCharts)
+d1 <- read.csv("s1.csv")
+plot1 <- rPlot(
+  Hours ~ Project,
+  data = d1,
+  type = "bar"
+)
+plot1$guides(x = list(title="Project",
+               numticks = 'none'))
+plot1
+```
+
+---
+
+## Are you making proress?
+```{r, echo = F, results='asis', comment=NA, message=FALSE, warning=FALSE}
+library(dplyr)
+d2 <- read.csv("s2.csv")
+d2 <- d2 %>% 
+  mutate(cum_dur = rev(cumsum(cum_dur)))
+
+plot2 <- rPlot(
+  cum_dur ~ start,
+  type = "point",
+  color = "project",
+  data = d2
+)
+plot2
+```
+
+---
+
+## With Toggl and R you can find out!
+<img src = "p1.png"> <img src = "p2.png", width = 300, height = 300> 
+
+---
+
+## Here's my take!
+<a href="https://qger.shinyapps.io/time_tracker">My Time-Tracking Journey</a>

@@ -1,0 +1,12 @@
+base
+httr
+base64enc
+jsonlite
+ISOweek
+dplyr
+ggplot2
+shiny
+rCharts
+reshape2
+slidify
+knitr
